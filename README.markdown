@@ -4,20 +4,28 @@ This gentoo overlay is not listed in official overlay list.
 
 ## How to use
 
-Get overlay files
+1. install layman.
+
+2. add a file `${EPREFIX}/etc/layman/overlays/cirno.xml` with content:
 
 ```
-cd /path/to/local/overlay
-git clone git://github.com/aleiphoenix/cirno-overlay
+<?xml version="1.0" ?>
+<repositories version="1.0">
+        <repo priority="50" quality="experimental" status="unofficial">
+                <name>cirno</name>
+                <description>missing daily reppo</description>
+                <homepage>http://github.com/aleiphoenix/cirno-overlay</homepage>
+                <owner>
+                        <email>aleiphoenix@gmail.com</email>
+                </owner>
+                <source type="git">git://github.com/aleiphoenix/cirno-overlay.git</source>
+        </repo>
+</repositories>
 ```
 
-Edit `/etc/portage/make.conf`, edit `PORTDIR_OVERLAY` .
+3. run `layman -a cirno`.
 
-```
-PORTDIR_OVERLAY="/path/to/local/overlay/cirno-overlay $PORTDIR_OVERLAY"
-```
-
-Then run `eix-update` .
+3. run `eix-update`.
 
 
 ## License
