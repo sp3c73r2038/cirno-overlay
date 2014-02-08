@@ -1,0 +1,13 @@
+[Unit]
+Description=Packet Filtering Framework
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/iptables-restore /var/lib/iptables/rules-save
+ExecReload=/sbin/iptables-restore /var/lib/iptables/rules-save
+ExecStop=/usr/lib/systemd/scripts/iptables-flush
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
