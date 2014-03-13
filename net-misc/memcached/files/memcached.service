@@ -1,0 +1,12 @@
+[Unit]
+Description=Memcached Daemon
+After=network.target
+
+[Service]
+User=memcached
+PIDFile=/run/memcached.pid
+EnvironmentFile=/etc/conf.d/memcached
+ExecStart=/usr/bin/memcached $MEMCACHED_OPTS
+
+[Install]
+WantedBy=multi-user.target
