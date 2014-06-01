@@ -24,13 +24,12 @@ SLOT="2"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x64-macos"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/rb-inotify-0.9.0"
+ruby_add_rdepend "
+	>=dev-ruby/celluloid-0.15.2
+	>=dev-ruby/celluloid-io-0.15.0
+	>=dev-ruby/rb-inotify-0.9.0"
 
-# all_ruby_prepare() {
-# 	sed -i -e '/[Cc]overalls/d' spec/spec_helper.rb || die
-# 	# Drop failing test
-# 	sed -i -e '/#85/,+17d' spec/listen/directory_record_spec.rb || die
-#
-# 	# Drop dependencies for file system events not available on Gentoo.
-# 	sed -i -e '/\(fsevent\|kqueue\)/d' ${RUBY_FAKEGEM_GEMSPEC} || die
-# }
+all_ruby_prepare() {
+	# Drop dependencies for file system events not available on Gentoo.
+	sed -i -e '/\(fsevent\|kqueue\)/d' ${RUBY_FAKEGEM_GEMSPEC} || die
+}
