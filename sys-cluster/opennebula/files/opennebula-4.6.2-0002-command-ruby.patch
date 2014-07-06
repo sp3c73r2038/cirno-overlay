@@ -1,0 +1,71 @@
+--- src/sunstone/bin/sunstone-server	2014-06-11 21:36:16.000000000 +0800
++++ src/sunstone/bin/sunstone-server	2014-07-06 19:53:07.230471549 +0800
+@@ -82,7 +82,7 @@
+
+   # Start the sunstone daemon
+   touch $SUNSTONE_LOCK_FILE
+-  ruby $SUNSTONE_SERVER > $SUNSTONE_LOG 2>$SUNSTONE_LOG_ERROR &
++  ruby19 $SUNSTONE_SERVER > $SUNSTONE_LOG 2>$SUNSTONE_LOG_ERROR &
+   LASTPID=$!
+
+   if [ $? -ne 0 ]; then
+
+--- src/onegate/bin/onegate-server	2014-06-11 21:36:16.000000000 +0800
++++ src/onegate/bin/onegate-server	2014-07-06 19:53:24.585470707 +0800
+@@ -59,7 +59,7 @@
+
+   # Start the onegate daemon
+   touch $ONEGATE_LOCK_FILE
+-  ruby $ONEGATE_SERVER > $ONEGATE_LOG 2>$ONEGATE_LOG_ERROR &
++  ruby19 $ONEGATE_SERVER > $ONEGATE_LOG 2>$ONEGATE_LOG_ERROR &
+   LASTPID=$!
+
+   if [ $? -ne 0 ]; then
+
+--- src/im_mad/remotes/common.d/collectd-client_control.sh	2014-06-11 21:36:16.000000000 +0800
++++ src/im_mad/remotes/common.d/collectd-client_control.sh	2014-07-06 19:53:53.895469285 +0800
+@@ -47,7 +47,7 @@
+
+ # Launch the client
+ function start_client() {
+-    nohup /usr/bin/env ruby $CLIENT $ARGV >/dev/null 2>&1 &
++    nohup /usr/bin/env ruby19 $CLIENT $ARGV >/dev/null 2>&1 &
+ }
+
+ function stop_client() {
+
+--- src/flow/bin/oneflow-server	2014-06-11 21:36:16.000000000 +0800
++++ src/flow/bin/oneflow-server	2014-07-06 19:54:29.063467579 +0800
+@@ -59,7 +59,7 @@
+   touch $FLOW_LOCK_FILE
+
+   # Start the oneflow-server daemon
+-  ruby $FLOW_SERVER >$FLOW_LOG 2>$FLOW_LOG_ERROR &
++  ruby19 $FLOW_SERVER >$FLOW_LOG 2>$FLOW_LOG_ERROR &
+
+   LASTRC=$?
+   LASTPID=$!
+
+--- src/cloud/occi/bin/occi-server	2014-06-11 21:36:16.000000000 +0800
++++ src/cloud/occi/bin/occi-server	2014-07-06 19:54:48.157466652 +0800
+@@ -65,7 +65,7 @@
+   touch $OCCI_LOCK_FILE
+
+   # Start the occi-server daemon
+-  ruby $OCCI_SERVER >$OCCI_LOG 2>$OCCI_LOG_ERROR &
++  ruby19 $OCCI_SERVER >$OCCI_LOG 2>$OCCI_LOG_ERROR &
+
+   LASTRC=$?
+   LASTPID=$!
+--- src/cloud/ec2/bin/econe-server	2014-06-11 21:36:16.000000000 +0800
++++ src/cloud/ec2/bin/econe-server	2014-07-06 19:55:07.273465725 +0800
+@@ -65,7 +65,7 @@
+     touch $ECONE_LOCK_FILE
+
+ 	# Start the econe-server daemon
+-	ruby $ECONE_SERVER >$ECONE_LOG 2>$ECONE_LOG_ERROR &
++	ruby19 $ECONE_SERVER >$ECONE_LOG 2>$ECONE_LOG_ERROR &
+
+ 	LASTRC=$?
+ 	LASTPID=$!
+
