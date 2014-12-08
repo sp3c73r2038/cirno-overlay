@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit autotools git-2
+inherit autotools eutils git-2
 
 # Make it more portable between straight releases
 # and _p? releases.
@@ -12,7 +12,7 @@ PARCH=${P/_}
 
 DESCRIPTION="Handshake obfuscation version of OpenSSH"
 HOMEPAGE="https://github.com/brl/obfuscated-openssh"
-EGIT_REPO_URI="git://github.com/brl/obfuscated-openssh"
+EGIT_REPO_URI="https://github.com/brl/obfuscated-openssh"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
