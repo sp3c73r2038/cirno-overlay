@@ -1,0 +1,26 @@
+diff -ru a/Makefile b/Makefile
+--- a/Makefile	2015-06-09 06:23:28.000000000 +0000
++++ b/Makefile	2015-07-12 13:41:18.408101541 +0000
+@@ -26,7 +26,7 @@
+ NO_AS_NEEDED = -Wl,--no-as-needed
+ LIBDL   = -ldl
+ LDFLAGS = -shared -fPIC $(NO_AS_NEEDED) $(LIBDL) -lpthread
+-INC     = 
++INC     =
+ PIC     = -fPIC
+ AR      = $(CROSS_COMPILE)ar
+ RANLIB  = $(CROSS_COMPILE)ranlib
+@@ -35,11 +35,11 @@
+ LD_SET_SONAME = -Wl,-soname=
+ INSTALL = ./tools/install.sh
+ 
+-LDSO_PATHNAME = libproxychains4.$(LDSO_SUFFIX)
++LDSO_PATHNAME = libproxychains.$(LDSO_SUFFIX)
+ 
+ SHARED_LIBS = $(LDSO_PATHNAME)
+ ALL_LIBS = $(SHARED_LIBS)
+-PXCHAINS = proxychains4
++PXCHAINS = proxychains
+ ALL_TOOLS = $(PXCHAINS)
+ ALL_CONFIGS = src/proxychains.conf
+ 
