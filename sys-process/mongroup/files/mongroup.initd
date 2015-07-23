@@ -1,0 +1,13 @@
+#!/sbin/runscript
+
+start() {
+	ebegin "Starting mongroup processes..."
+	mongroup start
+	eend $? "mongroup failed to start"
+}
+
+stop() {
+	ebegin "Stopping mongroup processes..."
+	mongroup stop
+	eend $? "mongroup failed to stop"
+}
