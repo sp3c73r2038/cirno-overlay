@@ -1,0 +1,13 @@
+#!/sbin/runscript
+
+start() {
+	ebegin "Starting monctl processes..."
+	/usr/bin/monctl start
+	eend $? "monctl failed to start"
+}
+
+stop() {
+	ebegin "Stopping monctl processes..."
+	/usr/bin/monctl stop
+	eend $? "monctl failed to stop"
+}
