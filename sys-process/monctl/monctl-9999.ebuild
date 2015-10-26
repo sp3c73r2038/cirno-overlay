@@ -28,4 +28,8 @@ src_compile() {
 src_install() {
 	cmake-utils_src_install
 	newinitd "${FILESDIR}"/monctl.initd monctl
+	dodir /etc/monctl
+	dodir /etc/monctl/apps.d
+	insinto /etc/monctl
+	doins "${FILESDIR}"/monctl.conf
 }
