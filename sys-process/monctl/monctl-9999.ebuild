@@ -30,6 +30,8 @@ src_install() {
 	newinitd "${FILESDIR}"/monctl.initd monctl
 	dodir /etc/monctl
 	dodir /etc/monctl/apps.d
+	dodir /var/log/monctl
+	dodir /var/lib/monctl
 	insinto /etc/monctl
 	doins "${FILESDIR}"/monctl.conf
 }
