@@ -11,6 +11,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+RDEPEND="
+	sys-process/mon
+"
+
 src_configure() {
 	mycmakeargs=(
 		-DPREFIX="${EPREFIX}/usr"
