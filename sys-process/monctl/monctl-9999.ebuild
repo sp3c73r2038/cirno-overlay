@@ -1,10 +1,10 @@
 EAPI="5"
 CMAKE_MIN_VERSION="2.6"
-inherit cmake-utils git-2
+inherit git-2 eutils
 
 DESCRIPTION="multiple mon management tool"
 HOMEPAGE="https://github.com/aleiphoenix/monctl"
-EGIT_REPO_URI="git://cgit.momoka.net/qianka/monctl.git"
+EGIT_REPO_URI="git://cgit.momoka.net/monctl.git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,22 +15,12 @@ RDEPEND="
 	sys-process/mon
 "
 
-src_configure() {
-	mycmakeargs=(
-		-DPREFIX="${EPREFIX}/usr"
-	)
-
-	cmake-utils_src_configure
+src_prepare() {
+	epatch_user
 }
-
-
-src_compile() {
-	cmake-utils_src_make
-}
-
 
 src_install() {
-	cmake-utils_src_install
+	dobin monctl
 	newinitd "${FILESDIR}"/monctl.initd monctl
 	dodir /etc/monctl
 	dodir /etc/monctl/apps.d
