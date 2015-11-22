@@ -1,5 +1,4 @@
 EAPI="5"
-CMAKE_MIN_VERSION="2.6"
 inherit git-2 eutils
 
 DESCRIPTION="multiple mon management tool"
