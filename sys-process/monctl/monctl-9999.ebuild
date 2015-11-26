@@ -3,7 +3,7 @@ inherit git-2 eutils
 
 DESCRIPTION="multiple mon management tool"
 HOMEPAGE="https://github.com/aleiphoenix/monctl"
-EGIT_REPO_URI="git://cgit.momoka.net/monctl.git"
+EGIT_REPO_URI="git://git.momoka.net/monctl.git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,7 +15,12 @@ RDEPEND="
 "
 
 src_prepare() {
+	sed -i -e 's;/local;;g' config.def.h
 	epatch_user
+}
+
+src_compile() {
+	emake LDFLAGS="-s -static"
 }
 
 src_install() {
