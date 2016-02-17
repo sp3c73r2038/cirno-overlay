@@ -12,6 +12,7 @@ IUSE=""
 
 RDEPEND="
 	sys-process/mon
+	sys-process/dolly
 "
 
 src_prepare() {
