@@ -16,7 +16,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake LDFLAGS="-static"
+	emake
 }
 
 src_install() {
