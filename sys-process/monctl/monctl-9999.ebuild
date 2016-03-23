@@ -31,6 +31,8 @@ src_install() {
 	dodir /etc/monctl/apps.d
 	dodir /var/log/monctl
 	dodir /var/lib/monctl
+	fperms 1777 /var/log/monctl
+	fperms 1777 /var/lib/monctl
 	insinto /etc/monctl
 	doins "${FILESDIR}"/monctl.conf
 }
