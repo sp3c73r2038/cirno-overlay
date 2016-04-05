@@ -1,0 +1,13 @@
+#!/sbin/runscript
+
+start() {
+	ebegin "Starting pola processes..."
+	/usr/bin/pola start
+	eend $? "pola failed to start"
+}
+
+stop() {
+	ebegin "Stopping pola processes..."
+	/usr/bin/pola stop
+	eend $? "pola failed to stop"
+}
