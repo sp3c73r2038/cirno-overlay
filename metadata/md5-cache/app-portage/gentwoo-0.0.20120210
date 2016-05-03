@@ -1,0 +1,11 @@
+DEFINED_PHASES=install setup
+DESCRIPTION=Client program for Social Compiling site GenTwoo
+EAPI=4
+HOMEPAGE=http://gentwoo.elisp.net
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-python/simplejson
+SLOT=0
+SRC_URI=http://gentwoo.elisp.net/download/gentwoo-0.0.20120210.tar.gz
+_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=425237c5c35a3391ff66e0050d32ae41
