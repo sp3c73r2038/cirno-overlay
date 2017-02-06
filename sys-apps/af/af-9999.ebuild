@@ -3,8 +3,8 @@ EAPI="5"
 inherit git-2 eutils
 
 DESCRIPTION="ag is really slow"
-HOMEPAGE="https://github.com/lucy/af"
-EGIT_REPO_URI="git://github.com/lucy/af.git"
+HOMEPAGE=""
+EGIT_REPO_URI="git://git.hachune.pl/af.git"
 
 LICENSE=""
 SLOT="0"
