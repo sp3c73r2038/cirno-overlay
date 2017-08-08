@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="dev-libs/json-c"
 
 src_prepare() {
 	epatch_user
