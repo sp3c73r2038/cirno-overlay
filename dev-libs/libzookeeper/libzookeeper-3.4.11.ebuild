@@ -1,6 +1,5 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=5
 
@@ -41,7 +40,7 @@ src_install() {
 	cd ${S}/src/c
 	emake DESTDIR="${D}" install || die "Install failed"
 	cd ${S}
-	dodoc README.txt CHANGES.txt || die
+	dodoc README.md || die
 	cp -a ${S}/src/c/generated/zookeeper.jute.h ${S}/src/c/include/
 	mkdir -p ${D}/usr/include/zookeeper
 	cp -a ${S}/src/c/include/* ${D}/usr/include/zookeeper/
