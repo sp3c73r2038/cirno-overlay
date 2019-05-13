@@ -23,10 +23,10 @@ src_compile() {
 src_install() {
 	dobin pola
 	newinitd "${FILESDIR}"/pola.initd pola
-	dodir /etc/pola
-	dodir /etc/pola/apps.d
-	dodir /var/log/pola
-	dodir /var/lib/pola
+	keepdir /etc/pola
+	keepdir /etc/pola/apps.d
+	keepdir /var/log/pola
+	keepdir /var/lib/pola
 	insinto /etc/pola
 	doins "${FILESDIR}"/pola.conf
 }
