@@ -1,0 +1,8 @@
+#!/sbin/openrc-run
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+command="${KUBELET_BINARY:-/usr/local/bin/kubelet}"
+pidfile="${KUBELET_PIDFILE:-/run/${RC_SVCNAME}.pid}"
+command_args="${KUBELET_OPTS}"
+start_stop_daemon_args="--background -p ${pidfile} --make-pidfile"
