@@ -1,5 +1,5 @@
-EAPI="5"
-inherit git-2 eutils
+EAPI="6"
+inherit git-r3 eutils
 
 DESCRIPTION="process keeper"
 HOMEPAGE="https://github.com/aleiphoenix/pola"
