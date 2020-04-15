@@ -12,10 +12,6 @@ IUSE=""
 
 RDEPEND="dev-libs/json-c"
 
-src_prepare() {
-	epatch_user
-}
-
 src_compile() {
 	emake
 }
