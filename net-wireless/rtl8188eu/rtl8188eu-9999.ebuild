@@ -2,7 +2,7 @@ EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit git-2 linux-info linux-mod
+inherit git-r3 linux-info linux-mod
 
 DESCRIPTION="stand-alone RTL8188EU driver."
 HOMEPAGE="https://github.com/lwfinger/rtl8188eu"

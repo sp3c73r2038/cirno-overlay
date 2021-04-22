@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit autotools eutils git-2
+inherit autotools eutils git-r3
 
 # Make it more portable between straight releases
 # and _p? releases.

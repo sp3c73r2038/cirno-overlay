@@ -1,6 +1,6 @@
 EAPI=5
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="Simple single-process process monitoring program written in C "
 HOMEPAGE="https://github.com/aleiphoenix/mon"

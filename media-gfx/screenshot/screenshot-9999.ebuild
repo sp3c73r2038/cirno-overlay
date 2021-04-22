@@ -3,7 +3,7 @@
 
 EAPI=5
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="A script using ImageMagick to take screenshots"
 HOMEPAGE="https://github.com/aleiphoenix/screenshot"

@@ -1,5 +1,5 @@
 EAPI="5"
-inherit git-2 eutils
+inherit git-r3 eutils
 
 DESCRIPTION=""
 HOMEPAGE="https://github.com/aleiphoenix/dolly"

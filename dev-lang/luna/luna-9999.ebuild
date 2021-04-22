@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="luna programming language - a small, elegant VM implemented in C"
 HOMEPAGE="https://github.com/luna/luna"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
-  sys-devel/llvm
+	sys-devel/llvm
 "
 
 src_prepare() {

@@ -1,6 +1,6 @@
 EAPI="5"
 
-inherit git-2 eutils
+inherit git-r3 eutils
 
 DESCRIPTION="ag is really slow"
 HOMEPAGE=""
