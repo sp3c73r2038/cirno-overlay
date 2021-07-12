@@ -1,8 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/Attic/rabbitmq-server-1.8.0.ebuild,v 1.2 2010/09/19 08:35:51 hollow dead $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils
 
